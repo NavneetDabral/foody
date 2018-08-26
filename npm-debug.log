@@ -1,0 +1,262 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'ngCart' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData ngCart
+8 silly fetchNamedPackageData ngCart
+9 silly mapToRegistry name ngCart
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'ngCart',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'ngCart',
+12 silly mapToRegistry   name: 'ngCart',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/ngCart
+14 verbose request uri https://registry.npmjs.org/ngCart
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 5:41:45 PM
+17 verbose request id db9a4b49cdf95221
+18 verbose etag W/"5708098a-18fe"
+19 verbose lastModified Fri, 08 Apr 2016 19:42:02 GMT
+20 http request GET https://registry.npmjs.org/ngCart
+21 http 304 https://registry.npmjs.org/ngCart
+22 verbose headers { date: 'Tue, 25 Jul 2017 12:11:49 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   etag: 'W/"5708098a-18fe"',
+22 verbose headers   age: '0',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-lcy1131-LCY',
+22 verbose headers   'x-cache': 'MISS',
+22 verbose headers   'x-cache-hits': '0',
+22 verbose headers   'x-timer': 'S1500984709.224601,VS0,VE18',
+22 verbose headers   vary: 'Accept-Encoding, Accept' }
+23 silly get cb [ 304,
+23 silly get   { date: 'Tue, 25 Jul 2017 12:11:49 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: 'W/"5708098a-18fe"',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-lcy1131-LCY',
+23 silly get     'x-cache': 'MISS',
+23 silly get     'x-cache-hits': '0',
+23 silly get     'x-timer': 'S1500984709.224601,VS0,VE18',
+23 silly get     vary: 'Accept-Encoding, Accept' } ]
+24 verbose etag https://registry.npmjs.org/ngCart from cache
+25 verbose get saving ngCart to C:\Users\DELL\AppData\Roaming\npm-cache\registry.npmjs.org\ngCart\.cache.json
+26 verbose correctMkdir C:\Users\DELL\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule ngCart@1.0.0 checking installable status
+40 silly cache add args [ 'ngCart', null ]
+41 verbose cache add spec ngCart
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: 'ngCart',
+42 silly cache add   scope: null,
+42 silly cache add   escapedName: 'ngCart',
+42 silly cache add   name: 'ngCart',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed ngCart@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for ngCart
+45 info addNameTag [ 'ngCart', 'latest' ]
+46 silly mapToRegistry name ngCart
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data Result {
+49 silly mapToRegistry   raw: 'ngCart',
+49 silly mapToRegistry   scope: null,
+49 silly mapToRegistry   escapedName: 'ngCart',
+49 silly mapToRegistry   name: 'ngCart',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/ngCart
+51 verbose addNameTag registry:https://registry.npmjs.org/ngCart not in flight; fetching
+52 verbose get https://registry.npmjs.org/ngCart not expired, no request
+53 silly addNameTag next cb for ngCart with tag latest
+54 silly addNamed ngCart@1.0.0
+55 verbose addNamed "1.0.0" is a plain semver version for ngCart
+56 silly cache afterAdd ngCart@1.0.0
+57 verbose afterAdd C:\Users\DELL\AppData\Roaming\npm-cache\ngCart\1.0.0\package\package.json not in flight; writing
+58 verbose correctMkdir C:\Users\DELL\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+59 verbose afterAdd C:\Users\DELL\AppData\Roaming\npm-cache\ngCart\1.0.0\package\package.json written
+60 silly loadAllDepsIntoIdealTree Finishing
+61 silly loadIdealTree Finishing
+62 silly currentTree front@1.0.0
+62 silly currentTree +-- @uirouter/core@5.0.3
+62 silly currentTree +-- angular-cookies@1.6.5
+62 silly currentTree +-- angular-route@1.6.5
+62 silly currentTree +-- angular-ui-router@1.0.3
+62 silly currentTree +-- angular@1.6.5
+62 silly currentTree `-- ng-infinite-scroll@1.3.0
+63 silly idealTree front@1.0.0
+63 silly idealTree +-- @uirouter/core@5.0.3
+63 silly idealTree +-- angular-cookies@1.6.5
+63 silly idealTree +-- angular-route@1.6.5
+63 silly idealTree +-- angular-ui-router@1.0.3
+63 silly idealTree +-- angular@1.6.5
+63 silly idealTree +-- ng-infinite-scroll@1.3.0
+63 silly idealTree `-- ngCart@1.0.0
+64 silly generateActionsToTake Starting
+65 silly install generateActionsToTake
+66 silly generateActionsToTake Finishing
+67 silly diffTrees action count 1
+68 silly diffTrees add ngCart@1.0.0
+69 silly decomposeActions action count 8
+70 silly decomposeActions fetch ngCart@1.0.0
+71 silly decomposeActions extract ngCart@1.0.0
+72 silly decomposeActions test ngCart@1.0.0
+73 silly decomposeActions preinstall ngCart@1.0.0
+74 silly decomposeActions build ngCart@1.0.0
+75 silly decomposeActions install ngCart@1.0.0
+76 silly decomposeActions postinstall ngCart@1.0.0
+77 silly decomposeActions finalize ngCart@1.0.0
+78 silly runTopLevelLifecycles Starting
+79 silly executeActions Starting
+80 silly install executeActions
+81 silly doSerial global-install 0
+82 silly doParallel fetch 1
+83 verbose correctMkdir C:\Users\DELL\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+84 verbose lock using C:\Users\DELL\AppData\Roaming\npm-cache\_locks\staging-fcd057d4ccc9cc24.lock for E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging
+85 silly doParallel extract 1
+86 silly extract ngCart@1.0.0
+87 verbose unbuild node_modules\.staging\ngCart-2a1faa9e
+88 silly gentlyRm E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e is being purged from base E:\NAVNEET\pathshaala\webapps\Project\food\front
+89 verbose gentlyRm don't care about contents; nuking E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e
+90 verbose tar unpack C:\Users\DELL\AppData\Roaming\npm-cache\ngCart\1.0.0\package.tgz
+91 verbose tar unpacking to E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e
+92 silly gentlyRm E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e is being purged
+93 verbose gentlyRm don't care about contents; nuking E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e
+94 silly gunzTarPerm modes [ '777', '666' ]
+95 silly gunzTarPerm extractEntry package.json
+96 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+97 silly gunzTarPerm extractEntry .npmignore
+98 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+99 silly gunzTarPerm extractEntry README.md
+100 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+101 silly gunzTarPerm extractEntry Gruntfile.js
+102 silly gunzTarPerm modified mode [ 'Gruntfile.js', 420, 438 ]
+103 silly gunzTarPerm extractEntry karma.conf.js
+104 silly gunzTarPerm modified mode [ 'karma.conf.js', 420, 438 ]
+105 silly gunzTarPerm extractEntry .travis.yml
+106 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+107 silly gunzTarPerm extractEntry bower.json
+108 silly gunzTarPerm modified mode [ 'bower.json', 420, 438 ]
+109 silly gunzTarPerm extractEntry dist/ngCart.js
+110 silly gunzTarPerm modified mode [ 'dist/ngCart.js', 420, 438 ]
+111 silly gunzTarPerm extractEntry dist/ngCart.min.js
+112 silly gunzTarPerm modified mode [ 'dist/ngCart.min.js', 420, 438 ]
+113 silly gunzTarPerm extractEntry src/ngCart.directives.js
+114 silly gunzTarPerm modified mode [ 'src/ngCart.directives.js', 420, 438 ]
+115 silly gunzTarPerm extractEntry src/ngCart.directives_test.js
+116 silly gunzTarPerm modified mode [ 'src/ngCart.directives_test.js', 420, 438 ]
+117 silly gunzTarPerm extractEntry src/ngCart.fulfilment.js
+118 silly gunzTarPerm modified mode [ 'src/ngCart.fulfilment.js', 420, 438 ]
+119 silly gunzTarPerm extractEntry src/ngCart.js
+120 silly gunzTarPerm modified mode [ 'src/ngCart.js', 420, 438 ]
+121 silly gunzTarPerm extractEntry src/ngCart_test.js
+122 silly gunzTarPerm modified mode [ 'src/ngCart_test.js', 420, 438 ]
+123 silly gunzTarPerm extractEntry template/ngCart/addtocart.html
+124 silly gunzTarPerm modified mode [ 'template/ngCart/addtocart.html', 420, 438 ]
+125 silly gunzTarPerm extractEntry template/ngCart/cart.html
+126 silly gunzTarPerm modified mode [ 'template/ngCart/cart.html', 420, 438 ]
+127 silly gunzTarPerm extractEntry template/ngCart/checkout.html
+128 silly gunzTarPerm modified mode [ 'template/ngCart/checkout.html', 420, 438 ]
+129 silly gunzTarPerm extractEntry template/ngCart/summary.html
+130 silly gunzTarPerm modified mode [ 'template/ngCart/summary.html', 420, 438 ]
+131 silly gentlyRm E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e\node_modules is being purged
+132 verbose gentlyRm don't care about contents; nuking E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e\node_modules
+133 silly doParallel preinstall 1
+134 silly preinstall ngCart@1.0.0 E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e
+135 info lifecycle ngCart@1.0.0~preinstall: ngCart@1.0.0
+136 silly lifecycle ngCart@1.0.0~preinstall: no script for preinstall, continuing
+137 silly doReverseSerial remove 0
+138 silly doSerial move 0
+139 silly doSerial finalize 1
+140 silly finalize E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\ngCart
+141 silly doSerial build 1
+142 silly build ngCart@1.0.0
+143 info linkStuff ngCart@1.0.0
+144 silly linkStuff ngCart@1.0.0 has E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules as its parent node_modules
+145 verbose linkBins ngCart@1.0.0
+146 verbose linkMans ngCart@1.0.0
+147 silly doSerial global-link 0
+148 silly doParallel update-linked 0
+149 silly doSerial install 1
+150 silly install ngCart@1.0.0 E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e
+151 info lifecycle ngCart@1.0.0~install: ngCart@1.0.0
+152 silly lifecycle ngCart@1.0.0~install: no script for install, continuing
+153 silly doSerial postinstall 1
+154 silly postinstall ngCart@1.0.0 E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging\ngCart-2a1faa9e
+155 info lifecycle ngCart@1.0.0~postinstall: ngCart@1.0.0
+156 verbose lifecycle ngCart@1.0.0~postinstall: unsafe-perm in lifecycle true
+157 verbose lifecycle ngCart@1.0.0~postinstall: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\ngCart\node_modules\.bin;E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.bin;C:\Program Files (x86)\ActiveState Komodo Edit 6\;C:\Program Files\Dell\DW WLAN Card;;;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Java\jdk1.6.0_14\bin;C:\Program Files (x86)\Java\jre6\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Brackets\command;C:\Program Files\nodejs\;C:\Users\DELL\AppData\Local\Microsoft\WindowsApps;C:\Users\DELL\AppData\Local\atom\bin;C:\Users\DELL\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin
+158 verbose lifecycle ngCart@1.0.0~postinstall: CWD: E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\ngCart
+159 silly lifecycle ngCart@1.0.0~postinstall: Args: [ '/d /s /c', 'bower install' ]
+160 silly lifecycle ngCart@1.0.0~postinstall: Returned: code: 1  signal: null
+161 info lifecycle ngCart@1.0.0~postinstall: Failed to exec postinstall script
+162 verbose unlock done using C:\Users\DELL\AppData\Roaming\npm-cache\_locks\staging-fcd057d4ccc9cc24.lock for E:\NAVNEET\pathshaala\webapps\Project\food\front\node_modules\.staging
+163 silly rollbackFailedOptional Starting
+164 silly rollbackFailedOptional Finishing
+165 silly runTopLevelLifecycles Finishing
+166 silly install printInstalled
+167 warn front@1.0.0 No description
+168 verbose If you need help, you may report this error at:
+168 verbose     <https://github.com/npm/npm/issues>
+169 warn front@1.0.0 No repository field.
+170 verbose If you need help, you may report this error at:
+170 verbose     <https://github.com/npm/npm/issues>
+171 verbose stack Error: ngCart@1.0.0 postinstall: `bower install`
+171 verbose stack Exit status 1
+171 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:255:16)
+171 verbose stack     at emitTwo (events.js:106:13)
+171 verbose stack     at EventEmitter.emit (events.js:191:7)
+171 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:40:14)
+171 verbose stack     at emitTwo (events.js:106:13)
+171 verbose stack     at ChildProcess.emit (events.js:191:7)
+171 verbose stack     at maybeClose (internal/child_process.js:891:16)
+171 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+172 verbose pkgid ngCart@1.0.0
+173 verbose cwd E:\NAVNEET\pathshaala\webapps\Project\food\front
+174 error Windows_NT 10.0.14393
+175 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "ngCart"
+176 error node v6.11.0
+177 error npm  v3.10.10
+178 error code ELIFECYCLE
+179 error ngCart@1.0.0 postinstall: `bower install`
+179 error Exit status 1
+180 error Failed at the ngCart@1.0.0 postinstall script 'bower install'.
+180 error Make sure you have the latest version of node.js and npm installed.
+180 error If you do, this is most likely a problem with the ngCart package,
+180 error not with npm itself.
+180 error Tell the author that this fails on your system:
+180 error     bower install
+180 error You can get information on how to open an issue for this project with:
+180 error     npm bugs ngCart
+180 error Or if that isn't available, you can get their info via:
+180 error     npm owner ls ngCart
+180 error There is likely additional logging output above.
+181 verbose exit [ 1, true ]

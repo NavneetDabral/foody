@@ -1,0 +1,28 @@
+order page
+   <div class="alert alert-success" ng-bind="ms">
+         </div>
+		 </div>
+<form name="userForm" ng-submit="submitForm(userForm.$valid)"  novalidate> <!-- novalidate prevents HTML5 
+           validation since we will be validating ourselves -->
+         <!--Category Name-->
+             <div class="form-group" ng-class="{ 'has-error' : userForm.fname.$invalid && !userForm.fname.$pristine }">
+            <label>Restaurant Name</label>
+   <input type="text" name="fname" class="form-control" ng-model="user.fname" required>
+    <span ng-show="userForm.fname.$invalid && userForm.fname.$touched" class="text-danger">Restaurant Name is required</span>
+           </div>
+        <!--providers-->
+             <div class="form-group" ng-class="{ 'has-error' : userForm.lname.$invalid && !userForm.lname.$pristine }">
+            <label>Address</label>
+   <input type="text" name="lname" class="form-control" ng-model="user.lname" required>
+    <span ng-show="userForm.lname.$invalid && userForm.lname.$touched" class="text-danger">Address is required</span>
+                 </div>
+        <!-- EMAIL -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine}">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" ng-model="user.email" required>
+            <span ng-show="userForm.email.$invalid && userForm.email.$touched" class="text-danger">e-mail is required</span>
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="text-danger">Enter a valid email.</p>
+         </div>
+                <!-- SUBMIT BUTTON -->
+        <button type="submit" class="btn btn-primary" ui-sref="courseciv" ng-disabled="userForm.$invalid">Add</button>
+    </form>

@@ -1,0 +1,26 @@
+<div class="container-fluid deco" ui-view>
+		<div class="login-page">
+                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                   <input ng-model="q" id="search" class="form-control searchbox" placeholder="Search Category">
+                <div ng-if="catname">
+            <div ng-repeat="r in catname | filter:q | startFrom:currentPage*pageSize | limitTo:pageSize" >
+                <div class="col-md-4 col-sm-4 col-lg-4 catbox" >
+<img class="thumbnail img-ali" ng-src="../back/uploads/{{r.image}}"
+alt="Generic placeholder thumbnail">
+                 <hr>
+             <label>Category  : {{r.category}}</br></label><hr>
+             <label>Restaurant Name : {{r.restname}}</label><hr><br/>
+                <hr/>
+                </div>
+             </div>
+            </div>
+		   </div>
+           </div>
+        <button class="btn btn-info" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button  class="btn btn-info" ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+</div>

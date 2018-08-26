@@ -1,0 +1,42 @@
+<!--Project by Xyxter-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin_pannel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"href="design.css">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.js"></script>
+    <script src="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+    <script src="node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script>
+    <script src="adminapp.js"></script>
+    </head>
+    <body ng-app="adminpannel">
+<div class="container-fluid">
+  <div class="jumbotron">
+<h2><i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>  Welcome Admin</h2>
+</div>
+  </div>
+    <div class="row">
+    <div class=" col-sm-3 col-md-3 col-lg-3 left_col" >
+<ul class="nav nav-pills nav-stacked ">    
+<li><a ui-sref="addCategory">Add Category</a></li>
+<li><a ui-sref="addRest">Add Restaurant</a></li>
+<li><a ui-sref="addFood">Add food</a></li>
+<li><a ui-sref="orders">Orders</a></li>
+<li><a ui-sref="changePassword"><i class="fa fa-key fa-lg" aria-hidden="true"></i> change password</a></li>
+<li><a ui-sref="logout"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> logout</a></li>        
+            </ul>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 right_col">
+            <ui-view>
+            </ui-view>
+        </div>
+        </div>
+        <!--<footer class="footer navbar-fixed-bottom">
+        </footer> -->
+    </body>
+</html>

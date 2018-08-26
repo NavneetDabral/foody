@@ -1,0 +1,15 @@
+<div class="container-fluid" ui-view>
+		<div class="login-page">
+                <div ng-if="cat">
+                <div class="restname">{{cat[0].restname}}</div>
+            <label class="restname">Categories</label>
+            <div  ng-repeat="r in cat track by $index">
+           <div class="col-md-4 col-lg-4 col-sm-4 catbox">
+   <img class="thumbnail" ng-src="../back/uploads/{{r.image}}" alt="Generic placeholder thumbnail"></hr>
+                 <button type="button" class="btn btn-info" ui-sref=".foodpage({food:r.category,resname:value})">{{r.category}}</button><hr>
+                           </div>
+                  </div>
+                </div>
+			   <div class="clearfix"> </div>
+			 </div>
+		   </div>

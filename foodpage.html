@@ -1,0 +1,63 @@
+<div class="container-fluid" ui-view>
+<div class="row shopping">
+      <div class="col-xs-offset-8 col-xs-4">
+        <a ui-sref=".cart">
+      <ngcart-summary></ngcart-summary></a>
+      </div>
+    </div>
+    <div class="login-page">
+                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                   <input ng-model="q" id="search" class="form-control searchbox" placeholder="Search food">
+                <div ng-if="cat">
+            <div ng-repeat="r in cat | filter:q | startFrom:currentPage*pageSize | limitTo:pageSize" >
+             <div class=row>
+             <div class="col-sm-4 col-md-4 col-lg-4 restbox">
+<img class="thumbnail" ng-src="../back/uploads/{{r.image}}"
+     alt="Generic placeholder thumbnail"></br>
+             <label>{{r.cuisine}}</br></label><hr>
+             <label>{{r.price|currency}}</br></label><hr>
+            <ngcart-addtocart id="{{r._id}}" name="{{r.cuisine}}" price="{{r.price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+                </div>
+                <hr/>
+            </div>
+			   <div class="clearfix"> </div>
+             </div>
+              <button class="btn btn-info" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button  class="btn btn-info" ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+		   </div>
+           </div>
+</div>
+
+<!--<div ui-view>
+<div class="row shopping">
+      <div class="col-xs-offset-8 col-xs-4">
+        <a ui-sref=".cart">
+      <ngcart-summary></ngcart-summary></a>
+      </div>
+    </div>
+    <hr/>
+<div class="row">
+    <table class="table table-responsive tbl" border=10>
+    <thead>
+    <tr>
+   <th class="restname">Name</th>
+   <th class="restname">Cost</th>
+    <th><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i></th>
+    </tr>
+</thead>
+<tbody>    
+<tr ng-repeat="r in cat">
+<td class="restname">{{r.cuisine}}<br></td>
+<td class="restname">{{r.price|currency}}</td>
+<td><ngcart-addtocart id="{{r._id}}" name="{{r.cuisine}}" price="{{r.price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart></td>
+ </tr>
+</tbody>
+</table>      
+    </div>
+    </div>
+</div>-->

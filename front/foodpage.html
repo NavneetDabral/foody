@@ -1,0 +1,28 @@
+<div ui-view>
+<div class="row shopping">
+      <div class="col-xs-offset-8 col-xs-4">
+        <a ui-sref=".cart">
+      <ngcart-summary></ngcart-summary></a>
+      </div>
+    </div>
+    <hr/>
+<div class="row">
+    <table class="table table-responsive tbl" border=10>
+    <thead>
+    <tr>
+   <th class="restname">Name</th>
+   <th class="restname">Cost</th>
+    <th><i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i></th>
+    </tr>
+</thead>
+<tbody>    
+<tr ng-repeat="r in cat">
+<td class="restname">{{r.cuisine}}<br></td>
+<td class="restname">{{r.price|currency}}</td>
+<td><ngcart-addtocart id="{{r._id}}" name="{{r.cuisine}}" price="{{r.price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart></td>
+ </tr>
+</tbody>
+</table>      
+    </div>
+    </div>
+</div>

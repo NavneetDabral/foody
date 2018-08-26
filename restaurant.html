@@ -1,0 +1,35 @@
+<div class="container-fluid deco" ui-view>
+		<div class="login-page">
+                   <span><i class="fa fa-search fa-lg" aria-hidden="true"></i><input ng-model="q" id="search" class="form-control searchbox" placeholder="Search Restaurants"></span><div ng-if="rest">
+            <div ng-repeat="r in rest | filter:q | startFrom:currentPage*pageSize | limitTo:pageSize" >
+                <div class="col-md-10 col-sm-10 col-lg-10 restbox" >
+             <div class=row>
+             <div class="col-sm-4 col-md-4 col-lg-4 ">
+<img class="thumbnail circle" ng-src="../back/uploads/{{r.image}}"
+alt="Generic placeholder thumbnail">
+                 </div>
+                 <div class="col-sm-6 col-md-6 col-lg-6">
+             <label class="restname">{{r.Restaurant_Name}}</br></label><hr>
+             <label>Address : {{r.Address}}</label><br/>
+             <label>Description : {{r.description}}</label><hr><br/>
+             <label>Email : {{r.email}}</label></br>
+             <label>Phone : {{r.Phone}}</label></br>
+            <button type="button" class="btn btn-info" ui-sref=".categories({restaurant:r.Restaurant_Name})">Food Categories</button>
+                </div>
+                </div>
+                <hr/>
+            </div>
+                </div>
+			   <div class="clearfix"> </div>
+             </div>
+              <button class="btn btn-info" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button  class="btn btn-info" ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+		   </div>
+           </div>
+</div>
+           

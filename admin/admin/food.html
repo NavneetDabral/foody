@@ -1,0 +1,49 @@
+<div ng-if="value===1">
+<div class="alert alert-success" ng-bind="ms"></div>
+		 </div>
+<h2>Add Cuisine</h2>
+<form class="form-horizontal design" role="form" ng-submit="addfood()" method="POST">
+<div class="form-group">
+<label for="fname" class="col-sm-2 control-label"> Name</label>
+<div class="col-sm-10">
+<input type="text" class="form-control" id="firstname"
+placeholder="Cuisine Name" ng-model="myLogin.cuname" required>
+</div>
+</div>
+<div class="form-group">
+<label for="repeatSelect" class="col-sm-2 control-label">Restaurant: </label>
+ <div class="col-sm-10">
+    <select name="repeatSelect" id="repeatSelect" ng-model="myLogin.restname">
+      <option ng-repeat="c in rest" value="{{c.Restaurant_Name}}">{{c.Restaurant_Name}}</option>
+	</select>
+	</div>
+</div>
+<div class="form-group">
+<label for="repeatSelect" class="col-sm-2 control-label">Category: </label>
+ <div class="col-sm-10">
+    <select name="repeatSelect" id="repeatSelect" ng-model="myLogin.catname">
+      <option ng-repeat="c in cat" value="{{c.category}}">{{c.category}}</option>
+	</select>
+	</div>
+</div>
+<div class="form-group">
+<label for="price" class="col-sm-2 control-label">price</label>
+<div class="col-sm-10">
+<input type="text" class="form-control" id="firsname"
+placeholder="price" ng-model="myLogin.price" required>
+</div>
+</div>
+<div class="form-group">
+  <label class="col-sm-2 control-label">Upload Image:</label>
+   <div class="button col-sm-10" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100" 
+    ngf-resize="{width: 100, height: 100}"><i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+  </div>
+</div>
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<button type="submit" class="btn btn-default button"> Add </button>
+</div>
+</div>
+</form>
+ 

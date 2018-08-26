@@ -1,0 +1,43 @@
+body{
+            background-color: dodgerblue;
+        }
+        .jumbotron{
+            margin-top:10px; 
+            padding-top: 5px;
+            margin-bottom: 20px;
+            box-shadow:.1em .1em 1em #100;
+            text-align:center;
+            text-shadow:0.1em 0.1em 0.1em;
+            background-attachment:fixed;
+        }
+        .row{
+            margin-left:0px;
+            padding-left: 0px; 
+        }
+        .right_col{
+            border:2px;
+            box-shadow:.1em .1em 1em #100;
+        }
+        .left_col{
+            border:2px;
+            box-shadow:.1em .1em 1em #100; 
+            box-sizing:border-box;
+        }
+        footer{
+          width:100%;
+            min-height: 50px;
+            background-color:#222;
+        }
+        .design{
+            padding-top:20px; 
+            padding-bottom:70px; 
+        }
+        a{
+          color:black;
+        }
+        .button{
+         cursor:pointer;  
+        }
+        h2{
+            text-decoration-style:double;  
+        }

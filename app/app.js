@@ -1,0 +1,101 @@
+var app=angular.module('FoodPanda',['ngRoute','ngCookies'])
+app.config(function($routeProvider)
+{
+ $routeProvider
+ .when("/",
+ {
+     templateUrl:'front.html'
+ })
+ .when("/register",
+ {
+     templateUrl:'register.html',
+     controller:'regisCtrl'
+ })
+ .when("/login",
+ {
+     templateUrl:'login.html',
+     controller:'loginCtrl'
+ })
+     .when("/resturant",
+{
+     templateUrl:'restaurant.html',
+     controller:'restctrl'
+})
+ .when("/read",
+ {
+     template:'welcome : {{user}}',
+     controller:function($scope,$cookies)
+     {
+$scope.user=$cookies.get('email');
+     }
+ })
+     .when('/category/:restaurant',
+    {
+        templateUrl:'category.html',
+        controller:function($scope,$routeParams,$http)
+        {
+            rname=$routeParams.restaurant;
+            $http.get("http://localhost:8086/category/"+rname).then(function(res)
+            {
+                console.log(res.data)
+            })
+        }
+    })
+})
+app.controller('loginCtrl',function($scope,$http,$cookies,$location)
+{
+    $scope.login=function()
+    {
+     $http.post("http://localhost:8086/login",$scope.myLogin).then(function(res)
+     {
+        if(res.data.err==0)
+        {
+         $cookies.put('email',res.data.msg);
+          $location.url('/read');
+            }
+        if(res.data.err==1)
+        {
+             console.log("hello2");
+          $scope.mesg=res.data.msg;
+        }
+     })
+    } 
+})
+app.controller('regisCtrl',function($scope,$http)
+{ 
+  $scope.regis=function()
+  {
+      var fn=$scope.myData.fn;
+      var ln=$scope.myData.ln;
+      var email=$scope.myData.email;
+      var pass=$scope.myData.pass;
+      var cpass=$scope.myData.cpass;
+      if(pass==cpass)
+      {
+     data={fnn:fn,lnn:ln,emaill:email,passs:pass};
+ $http.post("http://localhost:8086/regis",data).then(function(res)
+  {
+      //console.log(res.data);
+      $scope.data=res.data;
+      $scope.myData={};
+      $scope.ms="Registered successfully"
+  })
+      }
+      else
+      {
+          $scope.data={err: 1, msg: "Pass & cpass is not match"};
+          console.log("hello");
+      }
+  }
+})
+app.controller('restctrl',function($scope,$http)
+{
+$scope.fetch_rest=function()
+     {
+  $http.get("http://localhost:8086/fetch_rest").then(function(res)
+  {
+  $scope.rest=res.data.data;
+  console.log(res.data)
+  })
+     }
+ })
